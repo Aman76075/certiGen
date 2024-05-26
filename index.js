@@ -60,7 +60,7 @@ const generatePDF=async(name)=>{
       //  window.open(uri)
     const  uri= await pdfDoc.saveAsBase64({dataUri: true})
     // document.querySelector("#mypdf").src=uri;
-    saveAs(uri,"NSS Certificate.pdf",{autoBom:true});
+    saveAs(uri,name,{autoBom:true});
 };
 const submitBtn=document.getElementById("submit")
 const inputVal=document.querySelector("#name")
