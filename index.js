@@ -2,7 +2,7 @@
 
 const generatePDF=async(name)=>{
     const {PDFDocument,rgb}=PDFLib;
-    const exBytes=await fetch("./cert.pdf").then((res)=>{
+    const exBytes=await fetch("./cert2.pdf").then((res)=>{
         return res.arrayBuffer();
     });
     const exFont=await fetch("./AlexBrush-Regular.ttf").then(res=>{
@@ -22,7 +22,7 @@ const generatePDF=async(name)=>{
     const { width, height } = firstPage.getSize();
 
         const rectX = 190;
-        const rectY = 300;
+        const rectY = 330;
         const rectWidth = 200;
         const rectHeight = 100;
 
@@ -55,7 +55,7 @@ const generatePDF=async(name)=>{
           y: textY,
           size: fontSize,
           font: font,
-          color: rgb(0.392, 0.706, 0.863)
+          color: rgb(0.1, 0.1, 0.7)
         })
       //  window.open(uri)
     const  uri= await pdfDoc.saveAsBase64({dataUri: true})
